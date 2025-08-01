@@ -1,0 +1,11 @@
+{
+  "development": {
+    "username": "vlad",
+    "password": "audi",
+    "database": "ganttnoob_db",
+    "host": "127.0.0.1",
+    "port": 6432,
+    "dialect": "postgres"
+  }
+}
+

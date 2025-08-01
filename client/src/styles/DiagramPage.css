@@ -1,0 +1,222 @@
+.diagram-page {
+    flex-direction: column;
+    padding: 20px;
+    font-family: Arial, sans-serif;
+    background-color: #f9f9f9;
+    overflow-y: auto;
+}
+
+/* Заголовок */
+.project-header1 {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    border: 1px solid #e0e0e0;
+    background: #fff;
+    padding: 15px 20px;
+    box-shadow: 6px 6px 2px rgba(0,0,0,0.05);
+    margin-bottom: 20px;
+}
+
+.project-info {
+    max-width: 70%;
+}
+
+.project-title {
+    font-size: 24px;
+    margin: 0;
+    color: #333;
+}
+
+.project-info p {
+    margin: 5px 0 0;
+    color: #666;
+    font-size: 14px;
+}
+
+/* Основной контент: таблица + диаграмма */
+.diagram-content {
+  border: 1px solid #eaeaea;
+    display: flex;
+    flex: 1;
+}
+
+/* Левая часть с таблицей */
+.tasks-section {
+    flex: 1 1 50%;
+    background: #fff;
+    padding: 15px;
+    box-shadow: 6px 6px 2px rgba(0,0,0,0.05);
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+}
+
+/* Заголовок таблицы */
+.tasks-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.tasks-header h3 {
+    margin: 0;
+    font-size: 18px;
+    color: #333;
+}
+
+.add-task-btn {
+    background: #4cafef;
+    border: none;
+    color: #fff;
+    padding: 8px 14px;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: background 0.2s;
+    font-size: 14px;
+}
+
+.add-task-btn:hover {
+    background: #379de0;
+}
+
+/* Таблица */
+.tasks-table {
+  margin-top: 40px;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    border: 1px solid #e0e0e0;
+    border-radius: 6px;
+    overflow: hidden;
+}
+.gantt-content {
+  margin-top: 40px;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    border: 1px solid #e0e0e0;
+    border-radius: 6px;
+    overflow: hidden;
+}
+
+/* Контейнер для скролла */
+.tasks-scroll {
+    overflow-x: auto;
+    overflow-y: auto;
+    flex: 1;
+}
+
+/* Заголовки и строки */
+.tasks-header1-row,
+.tasks-row {
+    display: flex;
+    min-width: 900px; /* чтобы скролл работал при малой ширине */
+}
+
+.tasks-header1-row {
+    background: #f7f7f7;
+    font-weight: bold;
+    border-bottom: 1px solid #ddd;
+}
+
+.tasks-row {
+    background: #fff;
+    border-top: 1px solid #eaeaea;
+}
+
+/* Ячейки */
+.tasks-cell {
+    padding: 12px 10px;
+    border-right: 1px solid #eaeaea;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    white-space: nowrap;
+}
+
+.tasks-cell:last-child {
+    border-right: none;
+}
+
+.left-text {
+    justify-content: flex-start;
+}
+
+/* Фиксированный столбец "Действие" */
+.tasks-cell.action-cell {
+    position: sticky;
+    right: 0;
+    background: #fff;
+    z-index: 2;
+    min-width: 70px;
+    border-left: 1px solid #ddd;
+}
+
+/* Dropdown меню */
+.dropdown {
+    position: relative;
+}
+
+.dropdown-toggle {
+    background: none;
+    border: none;
+    font-size: 18px;
+    cursor: pointer;
+    padding: 0 4px;
+}
+
+.dropdown-menu {
+    top: -5px;          /* немного выше */
+    right: -140px;      /* сдвиг правее от кнопки */
+    background: #fff;
+    border: 1px solid #ddd;
+    border-radius: 6px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+    z-index: 10000;       /* выше всего, чтобы не пряталось */
+    display: flex;
+    flex-direction: column;
+    max-width: 140px;
+    padding: 4px 0;
+}
+.gantt-wrapper {
+  overflow-x: auto;    /* ✅ только горизонтальный скролл */
+  overflow-y: hidden;  /* убираем вертикальный */
+  height: auto;        /* ✅ высота подстраивается под контент */
+  max-height: none;    /* снимаем лимиты */
+}
+
+.gantt-container {
+  overflow-x: auto;
+  overflow-y: hidden ;
+  height: auto !important;
+  min-height: 520px; /* или больше на 20px */
+}
+
+
+
+
+.dropdown-menu button {
+    background: none;
+    border: none;
+    padding: 8px 12px;
+    text-align: left;
+    cursor: pointer;
+    font-size: 14px;
+    transition: background 0.2s;
+}
+
+.dropdown-menu button:hover {
+    background: #f1f1f1;
+}
+
+/* Правая часть - диаграмма Ганта */
+.gantt-section {
+    flex: 1  50%;
+    background: #fff;
+    padding-right: 15px;
+    box-shadow: 6px 6px 2px rgba(0,0,0,0.05);
+    overflow: auto;
+}
+

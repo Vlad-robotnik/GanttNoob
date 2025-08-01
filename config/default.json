@@ -1,0 +1,12 @@
+
+{
+  "port": 5000,
+  "jwtSecret": "secret",
+  "db": {
+    "port": 6432,
+    "host": "localhost",
+    "database": "ganttnoob_db",
+    "username": "vlad",
+    "password": "audi"
+  }
+}

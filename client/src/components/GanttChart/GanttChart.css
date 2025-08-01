@@ -1,0 +1,77 @@
+/* ===== 🎨 Цвета задач по статусу ===== */
+
+/* Открытые */
+.bar-wrapper[class*="status-open"] .bar {
+  fill: #f7f7f7 !important;
+  stroke: #000 !important;
+  stroke-width: 1px !important;
+  fill-opacity: 1 !important;
+}
+
+/* В работе */
+.bar-wrapper[class*="status-progress"] .bar {
+  fill: #f39c21 !important;
+  stroke: #000 !important;
+  stroke-width: 1px !important;
+  fill-opacity: 1 !important;
+}
+
+/* Выполнено */
+.bar-wrapper[class*="status-done"] .bar {
+  fill: #4caf50 !important;
+  stroke: #000 !important;
+  stroke-width: 1px !important;
+  fill-opacity: 1 !important;
+}
+
+/* Закрыто */
+.bar-wrapper[class*="status-closed"] .bar {
+  fill: #e2e0e0 !important;
+  stroke: #d3d3d3 !important;
+  stroke-width: 1px !important;
+  fill-opacity: 1 !important;
+}
+
+/* Серый текст для закрытых */
+.bar-wrapper[class*="status-closed"] .bar-label {
+  fill: #605f5f !important;
+  text-decoration: line-through;
+}
+
+/* ===== 🔻 Уменьшенные задачи с подзадачами ===== */
+.bar-wrapper[class*="has-children"] .bar {
+  height: 10px !important;         /* уменьшаем в 3 раза */
+  transform: translateY(10px);     /* центрируем в строке */
+  transform-box: fill-box;         /* для SVG */
+}
+
+/* Обычные задачи */
+.bar-wrapper[class*="no-children"] .bar {
+  height: 30px !important;
+}
+
+/* ===== 📌 Текст ===== */
+.bar-label {
+  font-weight: 600;
+  fill: #000 !important;
+}
+
+
+
+.bar-wrapper[class*="milestone"] .bar {
+  clip-path: polygon(50% 0%, 100% 50%, 50% 100%, 0% 50%);
+  fill: #673ab7 !important;
+  stroke: none !important; /* убираем квадратную рамку */
+  height: 40px !important;
+  width: 40px !important;
+  rx: 0 !important;
+  ry: 0 !important;
+  transform: translateY(-5px);
+}
+
+
+
+/* 🔹 Убираем текст у вех */
+.bar-wrapper[class*="milestone"] .bar-label {
+  display: none !important;
+}

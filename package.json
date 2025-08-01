@@ -1,0 +1,38 @@
+{
+  "name": "testproject",
+  "version": "1.0.0",
+  "description": "Mern stack",
+  "main": "app.js",
+  "scripts": {
+    "start": "node app.js",
+    "server": "nodemon app.js",
+    "client": "npm run start --prefix client",
+    "dev": "concurrently \"npm run server\" \"npm run client\""
+  },
+  "keywords": [
+    "mern",
+    "react"
+  ],
+  "author": "Vlad <lama_man@mail.ru>",
+  "license": "ISC",
+  "dependencies": {
+    "bcryptjs": "^3.0.2",
+    "config": "^4.0.1",
+    "express": "^5.1.0",
+    "express-validator": "^7.2.1",
+    "framer-motion": "^12.23.9",
+    "frappe-gantt": "^1.0.3",
+    "jsonwebtoken": "^9.0.2",
+    "lucide-react": "^0.525.0",
+    "mongodb": "^6.17.0",
+    "mongoose": "^8.16.3",
+    "pg": "^8.16.3",
+    "pg-hstore": "^2.3.4",
+    "sequelize": "^6.37.7"
+  },
+  "devDependencies": {
+    "concurrently": "^9.2.0",
+    "nodemon": "^3.1.10",
+    "sequelize-cli": "^6.6.3"
+  }
+}

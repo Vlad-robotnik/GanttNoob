@@ -1,0 +1,226 @@
+.my-team-page {
+    padding: 20px;
+
+    padding-bottom: 100px;
+    padding-right: 100px;
+    margin-left: auto;
+    /* прижимаем к правой стороне */
+    margin-right: 0;
+    width: 100%;
+}
+
+
+.my-team-page h1 {
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+/* Таблица */
+.team-table {
+    width: 100%;
+    border-collapse: separate;
+    /* меняем на separate, чтобы граница не пропадала */
+    background: #fff;
+    border-radius: 10px;
+    border: 1px solid #d2d0d0;
+    overflow: hidden;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
+}
+
+.team-table th,
+.team-table td {
+    padding: 12px 16px;
+    border-bottom: 1px solid #d2d0d0;
+    text-align: left;
+    font-size: 14px;
+}
+
+.team-table th {
+    background: #f9fafb;
+    font-weight: 600;
+    color: #374151;
+}
+
+.team-table tr:hover {
+    background-color: #f3f4f6;
+}
+
+/* Проекты в ячейке */
+.user-project {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: #f3f4f6;
+    padding: 6px 10px;
+    margin: 4px 0;
+    border-radius: 4px;
+    font-size: 13px;
+}
+
+.user-project span {
+    color: #111827;
+}
+
+.empty-projects {
+    color: #9ca3af;
+    font-size: 13px;
+}
+
+/* Кнопки */
+.add-btn {
+    background-color: #3b82f6;
+    color: #fff;
+    font-size: 18px;
+    width: 32px;
+    height: 32px;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: background 0.2s ease;
+}
+
+.add-btn:hover {
+    background-color: #2563eb;
+}
+
+.remove-btn {
+    background: transparent;
+    color: #ef4444;
+    font-size: 16px;
+    border: none;
+    cursor: pointer;
+    margin-left: 8px;
+}
+
+.remove-btn:hover {
+    color: #b91c1c;
+}
+
+/* Модалка */
+.modal-overlay {
+    position: fixed;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.4);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 50;
+}
+
+.modal-content {
+    background: #fff;
+    border-radius: 8px;
+    padding: 20px;
+    width: 400px;
+    position: relative;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.modal-content h2 {
+    font-size: 18px;
+    font-weight: 600;
+    margin-bottom: 12px;
+}
+
+.modal-close {
+    position: absolute;
+    top: 8px;
+    right: 8px;
+    background: transparent;
+    border: none;
+    font-size: 22px;
+    cursor: pointer;
+    color: #6b7280;
+}
+
+.modal-body {
+    margin-top: 16px;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+/* Кнопки проектов в модалке */
+.project-option {
+    background: #f3f4f6;
+    border: none;
+    padding: 10px;
+    border-radius: 6px;
+    font-size: 14px;
+    text-align: left;
+    cursor: pointer;
+    transition: background 0.2s ease;
+}
+
+.project-option:hover {
+    background: #e5e7eb;
+}
+
+/* Скролл для всей страницы */
+.page-scroll {
+    max-height: 100vh;
+    overflow-y: auto;
+}
+
+/* Список проектов */
+.projects-container {
+    padding-bottom: 0;
+    padding-left: 0;
+    padding-top: 0;
+    /* убираем внутренние отступы */
+
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+}
+
+.projects-container.scrollable {
+    max-height: 100px;
+    padding-top: 0;
+    overflow-y: auto;
+    padding-left: 0;
+    /* убираем внутренние отступы */
+
+    padding-bottom: 0;
+    /* убираем внутренние отступы */
+
+
+}
+
+/* Проект */
+.user-project {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: #f7f7f7;
+    padding: 4px 6px;
+    border-radius: 4px;
+}
+
+.owner-label {
+    font-size: 11px;
+    color: #fff;
+    background: #f0f0f1;
+    padding: 2px 5px;
+    border-radius: 4px;
+    margin-left: 6px;
+}
+
+.remove-btn {
+    background: transparent;
+    border: none;
+    color: red;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+/* Модальное окно со скроллом */
+.modal-body.scrollable {
+    max-height: 300px;
+    overflow-y: auto;
+    padding-right: 5px;
+}

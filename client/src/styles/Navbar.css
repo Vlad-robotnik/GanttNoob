@@ -1,0 +1,82 @@
+/* Navbar.css */
+.navbar {
+  background-color: #ffffff;
+  border-bottom: 1px solid #e5e7eb;
+  height: 49px;
+  display: flex;
+  align-items: center;
+  z-index: 11;
+  flex-shrink: 0; /* Предотвращает сжатие navbar */
+}
+
+.navbar__content {
+  width: 100%;
+  padding: 0 24px;
+}
+
+.navbar__menu {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  gap: 8px;
+}
+
+.navbar__item {
+  display: flex;
+}
+
+.navbar__link {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 6px 12px;
+  border-radius: 4px;
+  text-decoration: none;
+  color: #6b7280;
+  background-color: transparent;
+  transition: all 0.2s;
+  font-size: 0.875rem;
+  font-weight: 500;
+  white-space: nowrap;
+  position: relative;
+  height: 36px; /* Фиксированная высота */
+}
+
+.navbar__link:hover {
+  background-color: transparent; /* Убираем серый фон */
+  color: #2563eb; /* Оставляем исходный цвет текста */
+}
+
+.navbar__link:hover::after {
+  content: '';
+  position: absolute;
+  bottom: 0px; /* Позиционируем относительно нижней границы navbar */
+  left: 50%;
+  transform: translateX(-50%);
+  width: calc(100% - 8px); /* Ширина чуть меньше кнопки */
+  height: 2px;
+  background-color: #2563eb;
+}
+
+.navbar__link--active {
+  background-color: transparent;
+  color: #2563eb;
+  border-radius: 4px;
+}
+
+.navbar__link--active::after {
+  content: '';
+  position: absolute;
+  bottom: 0px; /* Позиционируем относительно нижней границы navbar */
+  left: 50%;
+  transform: translateX(-50%);
+  width: calc(100% - 8px); /* Ширина чуть меньше кнопки */
+  height: 2px;
+  background-color: #2563eb;
+}
+
+.navbar__label {
+  font-size: 0.875rem;
+  font-weight: 500;
+}
